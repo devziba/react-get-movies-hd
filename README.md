@@ -19,9 +19,6 @@ This project includes advanced React concepts and focuses on modern UI/UX.
 - useReducer
 - CSS Modules / Custom Styling
 
-## 📸 Screenshots
-Add screenshots here if you have them
-
 ## 📦 Installation
 ```bash
 npm install
