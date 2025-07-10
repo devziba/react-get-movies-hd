@@ -1,0 +1,28 @@
+.Body{
+    background-color: blueviolet;
+    width:100%;
+    padding: 20px;
+    min-height: 535px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+    
+}
+.card{
+    width: 189px;
+    height: 350px;
+    background-color: #d2c3fe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card h5{
+    text-align: center;
+}
+.movie-image{
+   height: 230px;
+   width: 155px;
+   object-fit: cover;
+   margin-bottom: 10px;
+}
