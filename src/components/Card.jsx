@@ -1,9 +1,9 @@
 import { FaPlay } from "react-icons/fa";
-const Card = ({ id, name, source }) => {
+const Card = ({ className,id, name, source }) => {
   return (
-    <div className="card">
+    <div className={`card ${className}`}>
       <div className="card-body">
-        <h5 className="card-title">{name}</h5>
+        <h5 >{name}</h5>
         <img
           className="movie-image"
           src={`../src/images/${source}.webp`}

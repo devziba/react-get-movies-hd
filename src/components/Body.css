@@ -2,14 +2,14 @@
     background-color: blueviolet;
     width:100%;
     padding: 20px;
-    min-height: 535px;
+    min-height: 735px;
     display: flex;
     flex-wrap: wrap;
     gap:20px;
     justify-content: center;
     
 }
-.card{
+.moviecard{
     width: 189px;
     height: 350px;
     background-color: #d2c3fe;
@@ -19,6 +19,8 @@
 }
 .card h5{
     text-align: center;
+    font-weight: 700;
+    text-transform: capitalize;
 }
 .movie-image{
    height: 230px;

@@ -8,8 +8,8 @@ const Body=()=>
     const movies=allThings.movies;
     return(
         <div className="Body">
-            {movies.map((element)=>{
-                return<Card id={element.id} name={element.name} source={element.src} key={element.id}></Card>})}
+            {movies.filter((element)=>element.what=="movie").map((element)=>{
+                return<Card className={"moviecard"} id={element.id} name={element.name} source={element.src} key={element.id}></Card>})}
         </div>
     );
 }

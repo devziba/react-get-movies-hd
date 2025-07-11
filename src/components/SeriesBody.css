@@ -1,0 +1,18 @@
+.SeriesBody{
+    background-color: rgb(177, 92, 170);
+    width:100%;
+    padding: 20px;
+    min-height: 735px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+}
+.seriescard{
+    background-color:rgb(255, 201, 230);
+    width: 189px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
