@@ -46,12 +46,12 @@ const Navbar = () => {
           </label>
         </Link>
 
-        <a href="#" className="a3">
+        <Link to="/games" className="a3">
           <CgGames className="game-icon" />
           <label htmlFor="" className="games-label">
             games
           </label>
-        </a>
+        </Link>
       </div>
     </div>
   );

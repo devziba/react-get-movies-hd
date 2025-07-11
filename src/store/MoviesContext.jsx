@@ -1,4 +1,4 @@
-import { createContext, useReducer, useState } from "react";
+import { createContext, useReducer } from "react";
 
 export const MoviesContext = createContext({
   movies: [],
@@ -251,13 +251,105 @@ const mySeries = [
   },
 ];
 
-
+const myGames = [
+  {
+    id:1,
+    name:"Assassin's creed",
+    src:"/games/Assassinscreed",
+    what:"game",
+  },{
+    id:2,
+    name:"call of duty",
+    src:"/games/codwwii",
+    what:"game",
+  },{
+    id:3,
+    name:"cuphead",
+    src:"/games/cuphead",
+    what:"game",
+  },{
+    id:4,
+    name:"cyberpunk",
+    src:"/games/cyberpunk",
+    what:"game",
+  },{
+    id:5,
+    name:"days gone",
+    src:"/games/daysgone",
+    what:"game",
+  },{
+    id:6,
+    name:"fall guys",
+    src:"/games/fallguys",
+    what:"game",
+  },{
+    id:7,
+    name:"farcry 5",
+    src:"/games/farcry5",
+    what:"game",
+  },{
+    id:8,
+    name:"fortnite",
+    src:"/games/fortnite",
+    what:"game",
+  },{
+    id:9,
+    name:"ghost of tsu...",
+    src:"/games/ghostoftsushima",
+    what:"game",
+  },{
+    id:10,
+    name:"god of war",
+    src:"/games/godofwar",
+    what:"game",
+  },{
+    id:11,
+    name:"grand theft au...",
+    src:"/games/gtav",
+    what:"game",
+  },{
+    id:12,
+    name:"need for speed",
+    src:"/games/nfsheat",
+    what:"game",
+  },{
+    id:13,
+    name:"rayman",
+    src:"/games/rayman",
+    what:"game",
+  },{
+    id:14,
+    name:"resident evil",
+    src:"/games/residentevil4",
+    what:"game",
+  },{
+    id:15,
+    name:"spider-man",
+    src:"/games/spiderman",
+    what:"game",
+  },{
+    id:16,
+    name:"the last of us",
+    src:"/games/thelastofus",
+    what:"game",
+  },{
+    id:17,
+    name:"uncharted 2",
+    src:"/games/uncharted2",
+    what:"game",
+  },{
+    id:18,
+    name:"watchdogs",
+    src:"/games/watchdogs",
+    what:"game",
+  },
+];
 
 const myFunc = (currentState, action) => {
   switch (action.type) {
     case "SEARCH":
       const name = action.payload.name.toLowerCase();
-      const allContent = [...myMovies, ...mySeries];
+      const allContent = [...myMovies, ...mySeries,...myGames];
       console.log(name);
       return allContent.filter((element) =>
         element.name.toLowerCase().includes(name)
@@ -268,7 +360,7 @@ const myFunc = (currentState, action) => {
 };
 
 const MoviesStore = ({ children }) => {
-  const allContent=[...myMovies,...mySeries];
+  const allContent = [...myMovies, ...mySeries,...myGames];
   const [movies, dispatchState] = useReducer(myFunc, allContent);
 
   const handleSearch = (element) => {
